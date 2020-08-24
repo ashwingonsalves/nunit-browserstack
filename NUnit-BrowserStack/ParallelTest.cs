@@ -3,11 +3,11 @@ using OpenQA.Selenium;
 
 namespace BrowserStack
 {
-  [TestFixture("parallel", "chrome")]
+  [TestFixture("parallel", "chrome"),]
   [TestFixture("parallel", "firefox")]
   [TestFixture("parallel", "safari")]
   [TestFixture("parallel", "ie")]
-  [Parallelizable(ParallelScope.Fixtures)]
+  [Parallelizable(ParallelScope.Self)]
   public class ParallelTest : SingleTest
   {
     public ParallelTest(string profile, string environment) : base(profile, environment) { }
